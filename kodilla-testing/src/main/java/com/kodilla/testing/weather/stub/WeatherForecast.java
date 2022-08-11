@@ -8,7 +8,8 @@ public class WeatherForecast {
     public WeatherForecast(Temperatures temperatures) {
         this.temperatures = temperatures;
     }
-    public Map<String, Double> calculateForecast(){
+
+    public Map<String, Double> calculateForecast() {
         Map<String, Double> resultMap = new HashMap<>();
         for (Map.Entry<String, Double> temperature : temperatures.getTemperatures().entrySet()) {
             resultMap.put(temperature.getKey(), temperature.getValue() + 1.0);
@@ -16,7 +17,7 @@ public class WeatherForecast {
         return resultMap;
     }
 
-    public double averangeTemperature(){
+    public double averangeTemperature() {
         Collection<Double> vauleList1 = temperatures.getTemperatures().values();
         double sum = 0;
         for (double temVauleList1 : vauleList1) {
@@ -24,21 +25,20 @@ public class WeatherForecast {
         }
         double averange = sum / vauleList1.size();
         return averange;
-        }
+    }
 
 
-    public double medianTemperature(){
-       ArrayList<Double> vauleList2 = (ArrayList<Double>) temperatures.getTemperatures().values();
-        Collections.sort(vauleList2);
-        double median = 0;
-        double averange = 0;
+    public double medianTemperature() {
+        Collection<Double> medianList = temperatures.getTemperatures().values();
+        List<Double> list = new ArrayList<Double>(medianList);
+        Collections.sort(list);
+        double median;
+        if (list.size() % 2 == 0)
+            median = (list.get(list.size() / 2) + list.get(list.size()/2 - 1))/2;
+        else
+            median = list.get(list.size()/2);
 
-        if(vauleList2.size() % 2 == 0){
-        averange = vauleList2.size()/2 + (vauleList2.size()/2)-1;
-        median = averange/2;
-        } else {
-            median = vauleList2.size()/2;
-        }
         return median;
     }
+
 }
