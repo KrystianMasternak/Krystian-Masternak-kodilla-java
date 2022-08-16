@@ -10,7 +10,7 @@ public final class ForumUser {
     private final int postsCount;
 
 
-    public ForumUser(final int idUser,final String username,final char sexUser,final int yearOfBirth,final int monthOfBirth,final int dayOfBirth ,final int postsCount) {
+    public ForumUser(final int idUser, final String username, final char sexUser, final int yearOfBirth, final int monthOfBirth, final int dayOfBirth, final int postsCount) {
         this.idUser = idUser;
         this.username = username;
         this.sexUser = sexUser;

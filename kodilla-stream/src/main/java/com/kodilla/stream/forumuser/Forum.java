@@ -10,10 +10,11 @@ public class Forum {
 
 
     public Forum(){
-        theForumUserList.add(new ForumUser(001, "Jon", 'M', 1995,12, 23, 3));
-        theForumUserList.add(new ForumUser(002, "aab", 'M',1999, 10, 14, 10));
-        theForumUserList.add(new ForumUser(004, "kdkd", 'F', 1988,8, 22, 19));
-        theForumUserList.add(new ForumUser(004, "kkkk", 'M', 2010, 3, 1, 30));
+        theForumUserList.add(new ForumUser(001, "Jonn", 'M', 1995,3,15,12));
+        theForumUserList.add(new ForumUser(002, "aacb", 'M', 1999,12, 4, 10));
+        theForumUserList.add(new ForumUser(004, "kdkd", 'F', 2000,4,23,8));
+        theForumUserList.add(new ForumUser(004, "kkkk", 'M', 2010, 1,1, 10));
+        theForumUserList.add(new ForumUser(004, "bbbb", 'M', 2001, 1,1, 0));
 
     }
 
