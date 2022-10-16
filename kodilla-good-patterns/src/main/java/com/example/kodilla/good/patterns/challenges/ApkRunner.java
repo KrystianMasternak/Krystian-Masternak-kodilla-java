@@ -1,7 +1,6 @@
 package com.example.kodilla.good.patterns.challenges;
 
-import java.util.List;
-import java.util.Map;
+
 import java.util.stream.Collectors;
 
 public class ApkRunner {
