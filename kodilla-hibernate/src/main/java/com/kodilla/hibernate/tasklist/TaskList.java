@@ -3,6 +3,7 @@ package com.kodilla.hibernate.tasklist;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
+
 @Entity
 @Table(name = "TASKLIST")
 public class TaskList {
@@ -19,7 +20,7 @@ public class TaskList {
     }
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @NotNull
     @Column(name = "ID")
     public int getId() {
@@ -36,15 +37,15 @@ public class TaskList {
         return description;
     }
 
-    public void setId(int id) {
+    private void setId(int id) {
         this.id = id;
     }
 
-    public void setListName(String listName) {
+    private void setListName(String listName) {
         this.listName = listName;
     }
 
-    public void setDescription(String description) {
+    private void setDescription(String description) {
         this.description = description;
     }
 }

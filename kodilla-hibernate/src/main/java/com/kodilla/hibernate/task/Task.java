@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
+
 @Entity
 @Table(name = "TASKS")
 public final class Task {
@@ -24,7 +25,7 @@ public final class Task {
     }
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @NotNull
     @Column(name = "ID", unique = true)
     public int getId() {
