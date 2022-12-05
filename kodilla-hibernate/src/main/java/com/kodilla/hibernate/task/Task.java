@@ -1,7 +1,11 @@
 package com.kodilla.hibernate.task;
 
 
-import jakarta.persistence.*;
+
+
+import org.springframework.stereotype.Service;
+
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 

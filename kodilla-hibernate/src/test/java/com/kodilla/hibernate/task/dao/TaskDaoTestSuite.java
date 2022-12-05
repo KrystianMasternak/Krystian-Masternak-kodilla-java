@@ -13,10 +13,10 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class TaskDaoTestSuite {
 
+
+    private static final String DESCRIPTION = "Test: Learn Hibernate";
     @Autowired
     private TaskDao taskDao;
-    private static final String DESCRIPTION = "Test: Learn Hibernate";
-
     @Test
     void testTaskDaoSave() {
         //Given
