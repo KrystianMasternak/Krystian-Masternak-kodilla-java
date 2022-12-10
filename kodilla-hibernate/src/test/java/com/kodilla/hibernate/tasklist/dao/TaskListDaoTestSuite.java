@@ -13,13 +13,15 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 public class TaskListDaoTestSuite {
 
+    private static final String LISTNAME = "Task to do";
+    private static final String DESCRIPTION = "Description task list";
     @Autowired
     private TaskListDao taskListDao;
 
     @Test
     void testFindByListName() {
         //Given
-        TaskList taskList = new TaskList("Task to do", "Description task list");
+        TaskList taskList = new TaskList(LISTNAME, DESCRIPTION);
 
         //When
         taskListDao.save(taskList);
@@ -27,11 +29,12 @@ public class TaskListDaoTestSuite {
         //When
         String listName = taskList.getListName();
         List<TaskList> readListName = taskListDao.findByListName(listName);
+        String actualNameList = taskList.getListName();
 
         //Then
-        assertEquals("Task to do", readListName.get(0));
+        assertEquals("Task to do", actualNameList);
 
         //CleanUp
-        taskListDao.removeByListName(listName);
+        taskListDao.delete(taskList);
     }
 }

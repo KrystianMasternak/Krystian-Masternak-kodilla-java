@@ -1,18 +1,14 @@
 package com.kodilla.hibernate.task;
 
+import jakarta.validation.constraints.NotNull;
 
-
-
-import org.springframework.stereotype.Service;
-
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+import jakarta.persistence.*;
 import java.util.Date;
 
 
 @Entity
 @Table(name = "TASKS")
-public final class Task {
+public class Task {
 
     private int id;
     private String description;

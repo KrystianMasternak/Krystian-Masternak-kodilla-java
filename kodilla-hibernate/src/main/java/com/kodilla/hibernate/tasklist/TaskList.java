@@ -1,9 +1,9 @@
 package com.kodilla.hibernate.tasklist;
 
-import org.springframework.stereotype.Service;
+import jakarta.validation.constraints.NotNull;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+import jakarta.persistence.*;
+
 
 
 @Entity
@@ -13,8 +13,7 @@ public class TaskList {
     private String listName;
     private String description;
 
-    public TaskList() {
-    }
+    public TaskList() {}
 
     public TaskList(String listName, String description) {
         this.listName = listName;
@@ -24,7 +23,7 @@ public class TaskList {
     @Id
     @GeneratedValue
     @NotNull
-    @Column(name = "ID")
+    @Column(name = "ID", unique = true)
     public int getId() {
         return id;
     }

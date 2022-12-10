@@ -14,9 +14,9 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
     runtimeOnly 'com.mysql:mysql-connector-j'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    implementation group: 'javax.validation', name: 'validation-api', version: '1.0.0.GA'
     implementation group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
 
 
