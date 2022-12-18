@@ -8,4 +8,6 @@ import org.springframework.stereotype.Repository;
 @Transactional
 @Repository
 public interface InvoiceDao extends CrudRepository<Invoice, Integer> {
+
+    Invoice findAllById(int id);
 }
